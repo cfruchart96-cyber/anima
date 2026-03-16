@@ -1,1 +1,186 @@
 
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANIMA — Galerie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+<div class="wrap">
+<div class="nav">
+
+<div class="brand">
+<img src="assets/img/logo.png" class="logo">
+<div>
+<strong>ANIMA</strong>
+<span>Accès professionnels — funéraire</span>
+</div>
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="index.html#demarche">Démarche</a></li>
+<li><a href="galerie.html">Galerie</a></li>
+<li><a href="index.html#acces">Accès pro</a></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</header>
+
+<section>
+<div class="wrap">
+
+<div class="section-head">
+<div>
+<h2>Galerie</h2>
+<p>Catalogue visuel des créations ANIMA.</p>
+</div>
+</div>
+
+<div class="catalogue">
+
+<!-- item -->
+
+<article class="item">
+<div class="thumb">
+<img src="assets/img/chat.jpg" class="zoomable">
+</div>
+<div class="item-body">
+<div class="meta">
+<strong>Chat</strong>
+<span class="pill">Animaux</span>
+</div>
+<p class="desc">Ligne épurée et apaisante.</p>
+</div>
+</article>
+
+<article class="item">
+<div class="thumb">
+<img src="assets/img/berger.jpg" class="zoomable">
+</div>
+<div class="item-body">
+<div class="meta">
+<strong>Berger Allemand</strong>
+<span class="pill">Animaux</span>
+</div>
+<p class="desc">Présence fidèle et intemporelle.</p>
+</div>
+</article>
+
+<article class="item">
+<div class="thumb">
+<img src="assets/img/croix.jpg" class="zoomable">
+</div>
+<div class="item-body">
+<div class="meta">
+<strong>Croix</strong>
+<span class="pill">Spirituel</span>
+</div>
+<p class="desc">Repère simple et respectueux.</p>
+</div>
+</article>
+
+<article class="item">
+<div class="thumb">
+<img src="assets/img/guitariste.jpg" class="zoomable">
+</div>
+<div class="item-body">
+<div class="meta">
+<strong>Guitariste</strong>
+<span class="pill">Métiers</span>
+</div>
+<p class="desc">La musique comme signature.</p>
+</div>
+</article>
+
+<article class="item">
+<div class="thumb">
+<img src="assets/img/infirmiere.jpg" class="zoomable">
+</div>
+<div class="item-body">
+<div class="meta">
+<strong>Infirmière</strong>
+<span class="pill">Métiers</span>
+</div>
+<p class="desc">Hommage discret.</p>
+</div>
+</article>
+
+</div>
+
+</div>
+</section>
+
+<section style="text-align:center">
+
+<div class="wrap">
+
+<h2>Catalogue complet</h2>
+
+<p style="color:rgba(232,237,243,.75)">
+L'accès au catalogue complet ANIMA est réservé aux professionnels du funéraire.
+</p>
+
+<br>
+
+<a class="btn btn-primary" href="index.html#acces">
+Demander mon accès pro
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+
+<div>ANIMA – accès réservé aux professionnels du funéraire</div>
+
+<div>
+Contact :
+<a href="mailto:c.fruchart96@gmail.com">email@anima.fr</a>
+ -
+<a href="tel:+33761929519">07 61 92 95 19</a>
+</div>
+
+</div>
+</div>
+</footer>
+
+<script>
+
+document.querySelectorAll('.zoomable').forEach(img=>{
+img.addEventListener('click',()=>{
+const overlay=document.createElement('div');
+overlay.classList.add('zoom-overlay');
+
+const zoomImg=document.createElement('img');
+zoomImg.src=img.src;
+
+overlay.appendChild(zoomImg);
+document.body.appendChild(overlay);
+
+overlay.addEventListener('click',()=>{
+overlay.remove();
+});
+});
+});
+
+</script>
+
+</body>
+</html>
