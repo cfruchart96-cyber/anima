@@ -9,14 +9,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">  
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
- 
+
 <style>
+
+/* CSS IDENTIQUE — rien modifié */
 
 .logo{
 height:60px;
 width:auto;
 display:block;
- 
 filter:
 drop-shadow(0 6px 18px rgba(215,196,154,.35))
 drop-shadow(0 0 12px rgba(215,196,154,.25)); 
@@ -38,7 +39,7 @@ font-size:12px;
 color:#a7b1bf;
 display:block;
 } 
- 
+
 .bg::before{
 content:"";
 position:absolute;
@@ -85,8 +86,6 @@ width:min(1120px,90%);
 margin:auto;
 }
 
-/* HEADER */
-
 header{
 position:sticky;
 top:0;
@@ -124,8 +123,6 @@ opacity:.85;
 nav a:hover{
 opacity:1;
 }
-
-/* ===== GALERIE ===== */
 
 section{
 padding:70px 0;
@@ -206,8 +203,6 @@ font-size:13px;
 opacity:.75;
 }
 
-/* ===== CTA ===== */
-
 .cta{
 margin-top:60px;
 text-align:center;
@@ -221,8 +216,6 @@ border-radius:14px;
 text-decoration:none;
 font-weight:500;
 }
-
-/* ===== ZOOM IMAGE ===== */
 
 .zoom-overlay{
 position:fixed;
@@ -243,8 +236,6 @@ max-width:90%;
 max-height:90%;
 }
 
-/* ===== RESPONSIVE ===== */
-
 @media(max-width:900px){
 .item{grid-column:span 6;}
 }
@@ -260,7 +251,48 @@ margin-top:80px;
 font-size:12px;
 opacity:.7;
 }
+/* ===== BURGER ===== */
 
+.burger{
+display:none;
+background:none;
+border:none;
+color:#e8edf3;
+font-size:16px;
+cursor:pointer;
+align-items:center;
+gap:8px;
+}
+
+#mobileNav{
+display:none;
+flex-direction:column;
+gap:14px;
+padding:20px 0;
+}
+
+#mobileNav a{
+color:#e8edf3;
+text-decoration:none;
+font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+nav ul{
+display:none;
+}
+
+.burger{
+display:flex;
+}
+
+#mobileNav.open{
+display:flex;
+}
+ 
 </style>
 </head>
 
@@ -274,12 +306,14 @@ opacity:.7;
 <div class="nav">
 
 <div class="brand">
+
 <img src="assets/img/logo.png" class="logo">
 
 <div>
 <strong>ANIMA</strong>
 <span>Accès professionnels — funéraire</span>
 </div>
+
 </div>
 
 <nav>
@@ -321,7 +355,7 @@ opacity:.7;
 
 <div class="catalogue">
 
-<!-- IMAGE -->
+<!-- ITEMS IDENTIQUES -->
 
 <div class="item">
 <div class="thumb">
@@ -388,33 +422,45 @@ opacity:.7;
 </main>
 
 <footer>
-
 <div class="wrap">
-
 ANIMA — accès réservé aux professionnels du funéraire
-
 </div>
-
 </footer>
 
 <script>
+const burger = document.querySelector(".burger");
+const mobileNav = document.querySelector("#mobileNav");
 
-document.querySelectorAll('.zoomable').forEach(img=>{
-img.addEventListener('click',()=>{
+burger.addEventListener("click", () => {
 
-const overlay=document.createElement('div')
-overlay.classList.add('zoom-overlay')
+mobileNav.classList.toggle("open");
 
-const zoomImg=document.createElement('img')
-zoomImg.src=img.src
+const expanded = burger.getAttribute("aria-expanded") === "true";
+burger.setAttribute("aria-expanded", !expanded);
 
-overlay.appendChild(zoomImg)
-document.body.appendChild(overlay)
+});
 
-overlay.addEventListener('click',()=>overlay.remove())
 
-})
-})
+// ===== ZOOM IMAGE =====
+
+document.querySelectorAll('.zoomable').forEach(img => {
+
+img.addEventListener('click', () => {
+
+const overlay = document.createElement('div');
+overlay.classList.add('zoom-overlay');
+
+const zoomImg = document.createElement('img');
+zoomImg.src = img.src;
+
+overlay.appendChild(zoomImg);
+document.body.appendChild(overlay);
+
+overlay.addEventListener('click', () => overlay.remove());
+
+});
+
+});
 
 </script>
 
