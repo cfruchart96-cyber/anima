@@ -1007,7 +1007,7 @@ border-radius:8px;
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <h2> Demmande d'accès professionnel</h2>
+            <h2> Demande d'accès professionnel</h2>
             <p>Réservé aux acteurs du funéraire. Après validation manuelle, vous recevez le catalogue, le lien et identifiants vers le site e-commerce privé.</p>
           </div>
         </div>
@@ -1042,8 +1042,28 @@ border-radius:8px;
               </div>
 
               <div class="field">
+              <label for="address">Adresse complète *</label>
+              <input id="address" name="address" type="text" required placeholder="Rue de la paix, 67000 Strasbourg" autocomplete="street-address" />
+              </div>
+
+              <div class="field">
                 <label for="city">Ville *</label>
                 <input id="city" name="city" type="text" required placeholder="Ville" autocomplete="address-level2" />
+              </div>
+
+              <div class="field">
+              <label>Souhaitez-vous recevoir un échantillon (idéal pour présentation aux familles) ?</label>
+
+              <div class="checkbox-group">
+              <label>
+              <input type="radio" name="sample" value="yes" required />
+              Oui, je souhaite recevoir un échantillon avec le catalogue et mes accès e-commerce </label>
+
+              <label>
+              <input type="radio" name="sample" value="no" />
+              Non
+              </label>
+              </div>
               </div>
 
               <div class="field full">
@@ -1058,7 +1078,7 @@ border-radius:8px;
               </button>
 
               <div class="mini">
-                Après validation, vous recevrez le lien vers le catalogue professionnel privé.
+                Réponse sous 24h — sans engagement
               </div>
             </div>
           </form>
@@ -1186,13 +1206,19 @@ overlay.remove();
       const phone = document.getElementById('phone').value.trim();
       const city = document.getElementById('city').value.trim();
 
-      if(!company || !name || !email || !phone || !city){
+      if(!company || !name || !email || !phone || !address || !city){
         showToast('Champs requis', 'Merci de compléter tous les champs marqués d’un astérisque.');
         return;
       }
       if(!validateEmail(email)){
         showToast('Email invalide', 'Merci d’indiquer un email professionnel valide.');
         return;
+      }
+      const sample = document.querySelector('input[name="sample"]:checked');
+
+      if(!sample){
+      showToast('Choix requis', 'Merci d’indiquer si vous souhaitez recevoir un échantillon.');
+      return;
       }
 
       try{
