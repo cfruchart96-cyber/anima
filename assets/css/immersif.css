@@ -61,12 +61,53 @@ body{background:#151613}
 .hero-editorial>p:not(.eyebrow){font-size:14px}
 .hero-editorial .button-row{align-items:flex-start}.hero-note{margin-top:30px;font-size:8px}
 .hero-art{max-width:370px;transform:none!important}
+
+/* Mise en page stable des sections Classique et détails */
+.classique-section{padding:clamp(100px,12vw,180px) 0;background:#f0e9de;color:#262920;overflow:hidden}
+.classique-heading{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:7vw;align-items:end;padding-bottom:90px}
+.classique-heading h2{font-size:clamp(52px,5.5vw,88px);line-height:1.02;letter-spacing:-.04em;margin:24px 0 0}
+.classique-heading h2 em{color:#8b7450;font-weight:500}
+.classique-heading>div:last-child{max-width:430px;color:#68695e;line-height:1.75}
+.classique-heading .text-link{display:inline-block;margin-top:24px;color:#262920}
+.classique-feature{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(280px,.72fr);gap:6vw;align-items:end}
+.classique-primary{margin:0;min-width:0}
+.classique-primary img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.classique-primary figcaption{display:flex;justify-content:space-between;gap:24px;padding-top:18px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.classique-primary figcaption strong{font:italic 28px var(--serif);letter-spacing:0;text-transform:none}
+.classique-aside{max-width:420px;padding-bottom:18px;color:#68695e}
+.classique-aside h3{font:42px var(--serif);line-height:1.02;color:#262920;margin:20px 0}
+.classique-aside h3 em{color:#8b7450;font-weight:500}
+.classique-aside .index-mark{font-size:11px;letter-spacing:.14em;color:#8b7450}
+.classique-aside .eyebrow{color:#766345}
+.classique-footnote{font-size:12px;color:#8c887d}
+.detail-journey{position:relative;min-height:260vh;background:#151613;color:#eee5d6;overflow:clip}
+.detail-inner{position:sticky;top:0;width:100%;max-width:1400px;min-height:100svh;height:100svh;margin:0 auto;padding:140px 5vw 80px;box-sizing:border-box;display:grid;grid-template-columns:minmax(280px,.58fr) minmax(0,1.42fr);gap:6vw;align-items:center}
+.detail-copy{position:relative;z-index:2;max-width:390px}
+.detail-copy h2{font-size:clamp(52px,5.5vw,88px);line-height:.98;letter-spacing:-.04em;margin:24px 0}
+.detail-copy h2 em{color:#cbb58f;font-weight:500}
+.detail-copy>p:not(.eyebrow){color:#b2b1a7;line-height:1.7}
+.detail-count{display:flex;align-items:center;gap:14px;margin-top:36px;color:#baa888;font-size:11px;letter-spacing:.14em}
+.detail-line{width:100px;height:1px;background:#baa88870}
+.detail-stage{position:relative;min-width:0;width:100%;height:min(68svh,720px);min-height:420px;overflow:hidden}
+.detail-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transform:translateX(8%) scale(.97);transition:opacity .45s ease,transform .55s ease,visibility .45s ease}
+.detail-slide.is-active{opacity:1;visibility:visible;transform:none}
+.detail-slide img{display:block;width:100%;height:calc(100% - 42px);object-fit:cover}
+.detail-slide figcaption{padding-top:14px;font-size:11px;letter-spacing:.08em;color:#c8c3b7}
+.detail-slide figcaption span{color:#baa888;margin-right:12px}
+@media(max-width:760px){
+ .classique-section{padding:90px 0}
+ .classique-heading,.classique-feature{display:block}
+ .classique-heading{padding-bottom:55px}
+ .classique-heading>div:last-child{margin-top:34px}
+ .classique-primary img{aspect-ratio:4/3}
+ .classique-primary figcaption{display:block}
+ .classique-primary figcaption strong{display:block;margin-top:8px}
+ .classique-aside{padding-top:48px}
+ .detail-journey{min-height:0;padding:90px 0;background:#151613}
+ .detail-inner{position:relative;display:block;height:auto;min-height:0;padding:0 24px}
+ .detail-copy{max-width:none;margin-bottom:48px}
+ .detail-stage{height:auto;min-height:0;overflow:visible}
+ .detail-slide,.detail-slide.is-active{position:relative;inset:auto;display:block;opacity:1;visibility:visible;transform:none;margin:0 0 42px}
+ .detail-slide img{height:auto;aspect-ratio:4/3;object-fit:cover}
+ .detail-slide figcaption{padding-top:10px}
 }
-/* Cadrage Sainte Vierge actif sur ordinateur et mobile */
-[data-zoom$="vierge.webp"] .piece-image img{object-position:center;transform:rotate(90deg) scale(1.28)}
-[data-zoom$="vierge.webp"]:hover .piece-image img{transform:rotate(90deg) scale(1.34)}
-.photo-dialog img[src$="vierge.webp"]{transform:rotate(90deg)}
-/* Logo ANIMA harmonisé avec souvenirunique.fr */
-.brand__logo{width:156px;height:40px;object-fit:contain}
-.brand__copy{display:none}
-@media(max-width:760px){.brand__logo{width:140px;height:auto}}
