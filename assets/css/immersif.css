@@ -121,3 +121,13 @@ body{background:#151613}
 .detail-slide img{height:auto;aspect-ratio:4/3;object-fit:cover}
 .detail-slide figcaption{padding-top:10px}
 }
+/* Images du teasing : cartes plus larges sur mobile, structure conservee */
+@media(max-width:760px){
+.story-sticky{grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:3vw;padding:100px 24px 65px}
+.story-intro{min-width:0}
+.story-intro h2{font-size:clamp(44px,10vw,64px)}
+.story-pictures{height:540px;min-width:0}
+.story-photo{width:55%}
+.story-photo.third{width:64%;left:18%}
+.story-photo img{height:300px}
+}
