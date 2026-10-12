@@ -61,42 +61,7 @@ body{background:#151613}
 .hero-editorial>p:not(.eyebrow){font-size:14px}
 .hero-editorial .button-row{align-items:flex-start}.hero-note{margin-top:30px;font-size:8px}
 .hero-art{max-width:370px;transform:none!important}
-.art-frame{min-height:0;height:auto;aspect-ratio:3/4}
-.art-caption{margin-top:18px}.art-caption strong{font-size:24px}.art-caption span{font-size:7px}
-.hero-discover{bottom:22px;left:24px}.hero-word{font-size:29vw}
-.image-story{height:auto}.story-sticky{position:relative;height:auto;min-height:0;display:block;padding:70px 24px}
-.story-intro h2{font-size:54px}.story-pictures{height:540px;margin-top:55px}
-.story-photo img{height:250px}.story-photo{width:49%}.story-photo.third{width:51%;top:31%;left:24%}
-.story-progress{display:none}
-.photo-grid{grid-template-columns:1fr 1fr;gap:28px 16px}.piece-label strong{font-size:24px}.piece-label small{font-size:8px;letter-spacing:.08em}
-.piece-plus{width:32px;height:32px;bottom:8px;right:8px}
-}
-@media(max-width:400px){.photo-grid{grid-template-columns:1fr}.story-photo img{height:215px}.story-pictures{height:460px}}
-@media(prefers-reduced-motion:reduce){.hero-art,.story-photo{transform:none!important}.image-story{height:auto}.story-sticky{position:relative}.photo-piece img{transform:none!important}}
-.classique-section{background:#e6dfd2;color:#272820;padding:clamp(90px,10vw,150px) 0 110px;position:relative;overflow:hidden}
-.classique-section::before{content:"CLASSIQUE";font:20vw/.8 var(--serif);position:absolute;top:18%;right:-5%;color:#aa95771a;pointer-events:none}
-.classique-heading{position:relative;display:grid;grid-template-columns:1.25fr .65fr;align-items:end;gap:7vw;margin-bottom:75px}
-.classique-heading .eyebrow,.classique-aside .eyebrow{color:#8a7151}
-.classique-heading h2{font-size:clamp(52px,5.7vw,93px);line-height:1.03;margin:20px 0 0;letter-spacing:-.035em}
-.classique-heading h2 em,.classique-aside h3 em{color:#917550}
-.classique-heading p:not(.eyebrow){font-size:17px;line-height:1.8;color:#62645d}
-.classique-heading .text-link{display:inline-block;margin-top:23px;border-bottom:1px solid #8b7652;padding-bottom:8px;color:#4b4434}
-.classique-feature{position:relative;display:grid;grid-template-columns:1.16fr .84fr;min-height:650px;gap:6vw;align-items:center}
-.classique-primary{margin:0;position:relative;box-shadow:25px 35px 65px #46443833;overflow:hidden;background:#b9b0a2}
-.classique-primary img{display:block;width:100%;height:min(70vw,760px);max-height:760px;min-height:540px;object-fit:cover;object-position:center 40%;transition:transform .9s ease}
-.classique-primary:hover img{transform:scale(1.04)}
-.classique-primary figcaption{position:absolute;inset:auto 0 0;padding:26px 30px;background:linear-gradient(transparent,#171816df);display:flex;justify-content:space-between;align-items:end;color:#fff;gap:10px}
-.classique-primary figcaption span{font-size:9px;letter-spacing:.17em}.classique-primary figcaption strong{font:italic 32px var(--serif)}
-.classique-aside{padding:0 2vw}.index-mark{font-size:10px;letter-spacing:.3em;color:#9b8a6a}.classique-aside h3{font:normal clamp(46px,5vw,74px)/1.02 var(--serif);margin:42px 0 25px}.classique-aside>p:not(.eyebrow){font-size:16px;line-height:1.9;color:#5e615a;max-width:440px}.classique-aside .classique-footnote{font-size:12px!important;margin-top:48px;border-top:1px solid #282a2740;padding-top:16px}
-.detail-journey{height:290vh;background:#1c201b;color:#ece4d6;position:relative;--detail-progress:0}
-.detail-inner{height:100svh;min-height:750px;position:sticky;top:0;display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:6vw;padding:100px max(5vw,24px);overflow:hidden}
-.detail-copy h2{font:normal clamp(55px,6vw,100px)/.96 var(--serif);margin:26px 0}.detail-copy h2 em{color:#bea67d}.detail-copy>p:not(.eyebrow){color:#b4b5a9;max-width:300px}
-.detail-count{display:flex;align-items:center;gap:17px;color:#c7b28d;font-size:11px;letter-spacing:.2em;margin-top:45px}.detail-line{display:block;height:1px;width:130px;background:#bca78050;position:relative}.detail-line::after{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:#c7aa72;transform:scaleX(var(--detail-progress));transform-origin:left}
-.detail-stage{position:relative;height:min(76svh,700px);min-height:480px;perspective:1300px}
-.detail-slide{position:absolute;inset:0;margin:0;background:#242720;opacity:0;transform:translateY(45px) scale(.92) rotateX(3deg);transition:opacity .55s ease,transform .65s cubic-bezier(.2,.75,.2,1);pointer-events:none}
-.detail-slide.is-active{opacity:1;transform:translateY(0) scale(1) rotateX(0);z-index:2;pointer-events:auto}
-.detail-slide img{width:100%;height:100%;object-fit:cover;display:block}
-.detail-slide figcaption{position:absolute;bottom:0;left:0;right:0;padding:40px 25px 22px;background:linear-gradient(transparent,#111c);font:italic 30px var(--serif)}
-.detail-slide figcaption span{font:11px var(--sans);letter-spacing:.14em;color:#d8c49e;margin-right:15px}
-@media(max-width:760px){.classique-section{padding:78px 0}.classique-heading,.classique-feature{grid-template-columns:1fr;gap:30px}.classique-heading{margin-bottom:38px}.classique-heading h2{font-size:clamp(45px,11vw,65px)}.classique-heading p:not(.eyebrow){font-size:14px}.classique-feature{gap:45px}.classique-primary img{height:120vw;min-height:0}.classique-primary figcaption{padding:20px}.classique-primary figcaption strong{font-size:22px}.classique-aside{padding:0 10px}.classique-aside h3{font-size:52px;margin:18px 0}.classique-aside>p:not(.eyebrow){font-size:14px}.classique-aside .classique-footnote{margin-top:25px}.detail-journey{height:auto}.detail-inner{position:relative;height:auto;min-height:0;display:block;padding:80px 24px}.detail-copy h2{font-size:66px}.detail-count{display:none}.detail-stage{height:auto;min-height:0;display:grid;gap:24px;margin-top:44px}.detail-slide{position:relative;opacity:1;transform:none!important;height:110vw;max-height:530px}.detail-slide figcaption{font-size:24px}}
-@media(prefers-reduced-motion:reduce){.detail-journey{height:auto}.detail-inner{height:auto;min-height:0;position:relative;display:block}.detail-stage{display:grid;gap:24px;height:auto}.detail-slide{position:relative;opacity:1;transform:none!important;height:600px}.classique-primary img{transform:none!important}}
+/* Correction ciblée du cadrage Sainte Vierge */
+[data-zoom$="vierge.webp"] .piece-image img{object-position:center;transform:rotate(90deg) scale(1.28)}
+[data-zoom$="vierge.webp"] .piece-image img:hover,[data-zoom$="vierge.webp"]:hover .piece-image img{transform:rotate(90deg) scale(1.34)}
+.photo-dialog img[src$="vierge.webp"]{transform:rotate(90deg)}
