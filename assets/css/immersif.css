@@ -66,3 +66,7 @@ body{background:#151613}
 [data-zoom$="vierge.webp"] .piece-image img{object-position:center;transform:rotate(90deg) scale(1.28)}
 [data-zoom$="vierge.webp"]:hover .piece-image img{transform:rotate(90deg) scale(1.34)}
 .photo-dialog img[src$="vierge.webp"]{transform:rotate(90deg)}
+/* Logo ANIMA harmonisé avec souvenirunique.fr */
+.brand__logo{width:156px;height:40px;object-fit:contain}
+.brand__copy{display:none}
+@media(max-width:760px){.brand__logo{width:140px;height:auto}}
