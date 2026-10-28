@@ -1,0 +1,17 @@
+name = "anima-partner-tracking"
+main = "src/index.js"
+compatibility_date = "2026-10-28"
+
+# Replace database_id after `wrangler d1 create anima_partner_tracking`.
+[[d1_databases]]
+binding = "DB"
+database_name = "anima_partner_tracking"
+database_id = "0360892c-3071-4fee-a013-b745b46f90fc"
+migrations_dir = "migrations"
+
+[vars]
+DATA_RETENTION_DAYS = "365"
+ALLOWED_DESTINATION_HOSTS = "drive.google.com,docs.google.com"
+
+[triggers]
+crons = ["15 3 * * *"]
