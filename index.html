@@ -111,21 +111,17 @@
     <section id="professionnels" class="section section--pro">
       <div class="shell"><div class="pro-panel glass reveal">
         <div class="pro-panel__intro"><p class="eyebrow">Catalogue professionnel</p><h2>Proposer aux familles<br><em>un hommage plus personnel.</em></h2><p>Accédez à la collection complète, au principe du tarif revendeur et à un parcours de commande simple. Demande réservée aux acteurs du funéraire, validée manuellement.</p><ul class="benefits"><li>Fabrication à la demande</li><li>Catalogue évolutif</li><li>Accompagnement professionnel</li><li>Relation fournisseur directe</li></ul></div>
-        <form id="access-form" class="pro-form" action="https://formspree.io/f/xblkddyl" method="POST" novalidate>
-          <input type="hidden" name="_subject" value="Nouvelle demande d’accès professionnel — ANIMA">
-          <input type="hidden" name="source" value="manufacture-anima.fr">
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
-          <div class="field-row"><label>Entreprise *<input id="company" name="company" type="text" autocomplete="organization" required></label><label>Nom et prénom *<input id="name" name="name" type="text" autocomplete="name" required></label></div>
-          <div class="field-row"><label>Email professionnel *<input id="email" name="email" type="email" autocomplete="email" required></label><label>Téléphone *<input id="phone" name="phone" type="tel" autocomplete="tel" required></label></div>
-          <div class="field-row"><label>Adresse complète *<input id="address" name="address" type="text" autocomplete="street-address" required></label><label>Ville *<input id="city" name="city" type="text" autocomplete="address-level2" required></label></div>
-          <fieldset><legend>Souhaitez-vous recevoir un échantillon de présentation ? *</legend><label class="choice"><input type="radio" name="sample" value="yes" required><span>Oui</span></label><label class="choice"><input type="radio" name="sample" value="no"><span>Non</span></label></fieldset>
-          <label>Votre demande <span>(facultatif)</span><textarea id="message" name="message" rows="3" placeholder="Catalogue, projet sur mesure, volumes estimés…"></textarea></label>
-          <div class="form-footer"><button id="submit-button" class="button button--primary" type="submit">Demander mon accès professionnel</button><small>Réponse sous 24 h ouvrées · sans engagement</small></div><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <div id="access-form" class="pro-form pro-email-cta">
+          <p class="eyebrow">Accès professionnel</p>
+          <h3>Demandez votre accès par e-mail</h3>
+          <p>Votre application e-mail s’ouvrira avec l’objet et les informations utiles déjà préparés. Notre équipe vous répond après vérification.</p>
+          <div class="form-footer"><button id="access-email-button" class="button button--primary" type="button">Préparer ma demande d’accès <span aria-hidden="true">↗</span></button><small>Réponse sous 24 h ouvrées · sans engagement</small></div>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </div>
       </div></div>
     </section>
   </main>
-  <footer class="site-footer"><div class="shell footer-grid"><div class="brand brand--footer"><img src="assets/img/logo-bon.png" referrerpolicy="no-referrer" alt="" class="brand__logo"><span class="brand__copy"><strong>ANIMA</strong><small>Manufacture commémorative</small></span></div><p>Des créations qui représentent une vie.</p><div class="footer-contact"><a href="mailto:c.fruchart96@gmail.com">Nous écrire</a><a href="tel:+33761929519">07 61 92 95 19</a></div></div><div class="shell footer-bottom"><span>© <span data-year></span> ANIMA</span><span>Accès professionnel funéraire</span></div></footer>
+  <footer class="site-footer"><div class="shell footer-grid"><div class="brand brand--footer"><img src="assets/img/logo-bon.png" referrerpolicy="no-referrer" alt="" class="brand__logo"><span class="brand__copy"><strong>ANIMA</strong><small>Manufacture commémorative</small></span></div><p>Des créations qui représentent une vie.</p><div class="footer-contact"><a href="#" id="footer-email-link">Nous écrire</a><a href="tel:+33761929519">07 61 92 95 19</a></div></div><div class="shell footer-bottom"><span>© <span data-year></span> ANIMA</span><span>Accès professionnel funéraire</span></div></footer>
   <dialog class="photo-dialog" aria-label="Détail de la création"><button class="photo-close" aria-label="Fermer la photo">×</button><img alt=""><p></p></dialog><script src="assets/js/site.js" defer></script><script src="assets/js/immersif.js" defer></script>
   <a class="floating-pro-cta" href="#professionnels">Demander mon accès pro <span aria-hidden="true">↗</span></a>
 </body>
